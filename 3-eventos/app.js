@@ -53,7 +53,7 @@ const validacionLetrasYNumeros  = (event) => {
   }
 }
 const validacionContrasena  = (event) => {
-  const RegExp = /^[a-zA-Z0-9@#$%]*[@#$%]{8,10}$/;
+  const RegExp = /^[a-zA-Z0-9@#$%]{8,10}$/;
   if (RegExp.test(event.key) && event.key != 'Backspace') {
     event.preventDefault();
   }
