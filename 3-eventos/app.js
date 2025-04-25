@@ -46,6 +46,18 @@ const validacionSoloNumeros = (event) => {
     event.preventDefault();
   }
 }
+const validacionLetrasYNumeros  = (event) => {
+  const RegExp = /^[a-zA-Z0-9]$/;
+  if (!RegExp.test(event.key) && event.key != 'Backspace') {
+    event.preventDefault();
+  }
+}
+const validacionContrasena  = (event) => {
+  const RegExp = /^[a-zA-Z0-9@#$%]*[@#$%]{8,10}$/;
+  if (RegExp.test(event.key) && event.key != 'Backspace') {
+    event.preventDefault();
+  }
+}
 
 // EVENTOS
 formulario.addEventListener('submit',validar);
@@ -53,3 +65,5 @@ nombre.addEventListener('keydown',validacionSoloLetras);
 apellido.addEventListener('keydown',validacionSoloLetras);
 telefono.addEventListener('keydown',validacionSoloNumeros);
 documento.addEventListener('keydown',validacionSoloNumeros);
+usuario.addEventListener('keydown',validacionLetrasYNumeros);
+contrasena.addEventListener('keydown',validacionContrasena);
