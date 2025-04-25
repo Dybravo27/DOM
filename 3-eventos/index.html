@@ -19,20 +19,45 @@
       <div class="container">
         <div class="card">
           <h2 class="center">Ingrese su datos de usuario</h2>
-          <form action="#">
-            <input type="text" name="nombre" placeholder="Nombre">
-            <input type="text" name="apellido" placeholder="Apellido">
-            <input type="tel" name="telefono" maxlength="10" placeholder="Telefono">
-            <input type="number" name="documento" placeholder="Documento">
-            <input type="text" name="usuario" placeholder="Usuario">
-            <input type="password" name="contrasena" placeholder="Contraseña">
+          <form action="#" novalidate>
+            <div class="form__control">
+              <input type="text" name="nombre" placeholder="Nombre" required>
+            </div>
+            <div class="form__control">
+              <input type="text" name="apellido" placeholder="Apellido" required>
+            </div>
+            <div class="form__control">
+              <input type="tel" name="telefono" maxlength="10" placeholder="Telefono" required>
+            </div>
+            <div class="form__control">
+              <select name="ciudad" id="ciudad">
+                <option>Selecciones</option>
+                <option value="1">Bucaramanga</option>
+                <option value="2">Floridablanca</option>
+                <option value="3">Giron</option>
+                <option value="4">Piedecuesta</option>
+              </select>
+            </div>
+            <div class="form__control">
+              <input type="number" name="documento" placeholder="Documento">
+            </div>
+            <div class="form__control">
+              <input type="text" name="usuario" placeholder="Usuario">
+            </div>
+            <div class="form__control">
+              <input type="password" name="contrasena" placeholder="Contraseña">
+            </div>
+            <div class="form__control">
+              <input type="checkbox" name="politicas" id="politicas">
+              <label for="politicas">Aceptar terminos y condiciones</label>
+            </div>
             <button type="submit" id="btn_validar">Validar</button>
           </form>
         </div>
       </div>
     </section>
   </main>
-  <script src="app.js"></script>
+  <script src="app.js" type="module"></script>
 </body>
 
 </html>
