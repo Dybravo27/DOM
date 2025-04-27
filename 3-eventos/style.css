@@ -186,3 +186,18 @@ button:hover {
   background: var(--heavyMetal);
   color: var(--starship);
 }
+.form__control{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.form__check{
+  width: min-content;
+  margin: 0 7px 0 20px;
+}
+
+.form__terminos{
+  color: var(--white);
+  font-size: 0.9rem;
+  margin-left: 10px;
+}

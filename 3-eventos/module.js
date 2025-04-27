@@ -6,7 +6,6 @@ export const validarFormulario = (e) => {
   });
 
   campos.forEach(campo => {
-    // console.log(campo);
     switch (campo.tagName) {
       case 'INPUT':
         if (campo.value.trim() == "") {
@@ -18,11 +17,16 @@ export const validarFormulario = (e) => {
           mensaje.classList.add('span_error');
           mensaje.textContent = 'Ingresa tu campo completo';
           campo.insertAdjacentElement('afterend', mensaje);
-          // return;
         }
         break;
       case 'SELECT':
-        console.log(campo.type);
+        if (campo.selectedIndex.trim() == "") {
+          campo.classList.add('input_error');
+          let mensaje = document.createElement('span');
+          mensaje.classList.add('span_error');
+          mensaje.textContent = 'Ingresa tu campo completo';
+          campo.insertAdjacentElement('afterend', mensaje);
+        }
         break;
     
       default:
