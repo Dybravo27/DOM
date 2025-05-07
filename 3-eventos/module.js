@@ -23,7 +23,7 @@ export const validarFormulario = (e) => {
   // se valida que tenga algun checkbox seleccionado
   if (campo_checkbox.length < 3) {
     obj[checkbox[0].name] = "";
-    alert("Tiene que seleccionar 3 o mas habiliades")
+    alert("Tiene que seleccionar 3 o mas habilidades")
   } else {
     obj[checkbox[0].name] = [...campo_checkbox].map(e => e.value);
     console.log(campo_checkbox);
@@ -83,26 +83,26 @@ export const validarFormulario = (e) => {
 };
 
 export const validacionSoloLetras = (event) => {
-  const RegExp = /[0-9]/;
-  if (RegExp.test(event.key)) {
+  const RegExpLetras = /[0-9]/;
+  if (RegExpLetras.test(event.key)) {
     event.preventDefault();
   }
 }
 export const validacionSoloNumeros = (event) => {
-  const RegExp = /^[a-zA-Z]$/;
-  if (RegExp.test(event.key)) {
+  const RegExpNumeros = /^[a-zA-Z]$/;
+  if (RegExpNumeros.test(event.key)) {
     event.preventDefault();
   }
 }
 export const validacionLetrasYNumeros = (event) => {
-  const RegExp = /^[a-zA-Z0-9]$/;
-  if (!RegExp.test(event.key) && event.key != 'Backspace') {
+  const RegExpLetrasNumeros = /^[a-zA-Z0-9]$/;
+  if (!RegExpLetrasNumeros.test(event.key) && event.key != 'Backspace') {
     event.preventDefault();
   }
 }
 export const validacionContrasena = (event) => {
-  const RegExp = /^[a-zA-Z0-9@#$%]{8,10}$/;
-  if (RegExp.test(event.key) && event.key != 'Backspace') {
+  const regexCaracterPermitido = /^[a-zA-Z0-9@#$%]$/;
+  if (!regexCaracterPermitido.test(event.key) && event.key !== 'Backspace' && event.key !== 'Tab') {
     event.preventDefault();
   }
 }

@@ -35,12 +35,13 @@ politicas.addEventListener('change', validarBoton);
 
 formulario.addEventListener('submit', isValid);
 formulario.addEventListener('submit', validarFormulario);
+
 nombre.addEventListener('keydown', validacionSoloLetras);
 apellido.addEventListener('keydown', validacionSoloLetras);
 telefono.addEventListener('keydown', validacionSoloNumeros);
 documento.addEventListener('keydown', validacionSoloNumeros);
 usuario.addEventListener('keydown', validacionLetrasYNumeros);
-// contrasena.addEventListener('keydown', validacionContrasena);
+contrasena.addEventListener('keydown', validacionContrasena);
 
 nombre.addEventListener('blur', limpiar);
 apellido.addEventListener('blur', limpiar);
